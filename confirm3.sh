@@ -1,11 +1,11 @@
 #!/usr/bin/bash
 pilih="Yes\nNo\nBack"
 
-selected=$(echo -e $pilih | wofi -W 10% --dmenu --line 3 --cache-file /dev/null -p "Logout DWL ?" | awk '{print tolower ($1)}')
+selected=$(echo -e $pilih | wofi -W 10% --dmenu --line 3 --cache-file /dev/null -p "Logout Wayland ?" | awk '{print tolower ($1)}')
 
 case $selected in
    yes)
-      exec killall dwl;;
+      exec killwaycomp.sh;;
    no)
       exec killall wofi;;
    back)
